@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css files/predict.css">
+    <link rel="stylesheet" href="./css files/home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+          <a href="#" class="logo">AirAware</a>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="predict.html">Predict</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+    </nav>
+    <div class="form-container">
+        <h1>AQI Prediction</h1>
+        <form id="aqiForm">
+            <div class="input-group">
+                <label for="pm25">PM2.5:</label>
+                <input type="number" id="pm25" name="pm25" placeholder="Enter PM2.5 value" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="no2">NO2:</label>
+                <input type="number" id="no2" name="no2" placeholder="Enter NO2 value" required>
+            </div>
+
+            <div class="input-group">
+                <label for="co">CO:</label>
+                <input type="number" id="co" name="co" placeholder="Enter CO value" required>
+            </div>
+
+            <div class="input-group">
+                <label for="so2">SO2:</label>
+                <input type="number" id="so2" name="so2" placeholder="Enter SO2 value" required>
+            </div>
+
+            <div class="input-group">
+                <label for="o3">O3:</label>
+                <input type="number" id="o3" name="o3" placeholder="Enter O3 value" required>
+            </div>
+
+            <button type="button" onclick="calculateAQI()">Predict AQI</button>
+        </form>
+
+        <div id="result">
+            <h2>AQI Result: <span id="aqiValue">0</span></h2>
+            <h3>Air Quality: <span id="aqiText">Unknown</span></h3>
+        </div>
+    </div>
+    <script src="./script files/predict.js"></script>
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212; /* Dark background */
+    color: #f5f5f5; /* Light text for contrast */
+    scroll-behavior: smooth;
+  }
+  
+  /* Smooth transitions for all links and buttons */
+  a, button {
+    transition: all 0.3s ease-in-out;
+  }
+  /* Contact Section */
+  .contact-section {
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 50px;
+    color: #f27a11;
+    margin-bottom: 20px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .section-description {
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+    color: #ccc;
+    margin-bottom: 50px;
+    line-height: 1.6;
+  }
+  
+  .contact-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    flex-basis: 45%;
+    background: #1f1f1f;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-form:hover {
+    transform: translateY(-5px);
+  }
+  
+  .contact-form h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 28px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+    font-size: 16px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #292929;
+    color: #ccc;
+    transition: border 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #ffffff;
+    outline: none;
+  }
+  
+  .btn {
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    color: rgb(0, 0, 0);
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    -webkit-transition: background 0.3s ease, transform 0.3s ease;
+    -moz-transition: background 0.3s ease, transform 0.3s ease;
+    -ms-transition: background 0.3s ease, transform 0.3s ease;
+    -o-transition: background 0.3s ease, transform 0.3s ease;
+}
+  
+  .btn:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+  }
+  
+  /* FAQ Section */
+  .faq {
+    flex-basis: 45%;
+    background: #1f1f1f;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .faq:hover {
+    transform: translateY(-5px);
+  }
+  
+  .faq h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 28px;
+  }
+  
+  .accordion {
+    margin-top: 20px;
+  }
+  
+  .accordion-item {
+    margin-bottom: 20px;
+  }
+  
+  .accordion-header {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .accordion-header:hover {
+    background: #fdfffe;
+  }
+  
+  .accordion-content {
+    padding: 15px;
+    background: #292929;
+    border-radius: 5px;
+    display: none;
+    color: #ccc;
+    animation: slideDown 0.4s ease-in-out;
+  }
+  
+  .accordion-content.active {
+    display: block;
+  }
+  
+  @keyframes slideDown {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 500px;
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contact-grid {
+      flex-direction: column;
+    }
+  
+    .contact-form,
+    .faq {
+      flex-basis: 100%;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #1c1c1c;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+  

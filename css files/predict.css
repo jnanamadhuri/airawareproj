@@ -1,0 +1,142 @@
+/* General Body Style with Background Image */
+body {
+    background-image: url('https://images.unsplash.com/photo-1651330484022-47dd538a7732?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;  /* Use percentage-based font-size */
+}
+
+
+/* Form Container Styling */
+.form-container {
+    background-color: rgba(31, 31, 31, 0.9);
+    padding: 2rem; /* Use rem for padding */
+    border-radius: 10px;
+    width: 90%;  /* Make width responsive */
+    max-width: 400px;  /* Limit the max width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.form-container h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;  /* Relative font size */
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;  /* Use rem instead of px */
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;  /* Use rem for responsive text */
+}
+
+button {
+    width: 100%;
+    padding: 1rem;  /* Adjust button size responsively */
+    border: none;
+    border-radius: 5px;
+    background-color: #f27a11;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f27a11;
+}
+
+/* Result Section */
+#result {
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#result.visible {
+    opacity: 1;
+}
+
+#result h2, #result h3 {
+    font-size: 1.2rem;
+}
+
+#aqiValue {
+    color: #f27a11;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#aqiText {
+    color: #f27a11;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+    
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    
+    .form-container {
+        width: 100%;  /* Allow full width on smaller screens */
+        padding: 1rem;  /* Adjust padding for smaller screens */
+    }
+    
+    .form-container h1 {
+        font-size: 1.6rem;  /* Adjust header size */
+    }
+
+    #result h2, #result h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .form-container h1 {
+        font-size: 1.4rem;  /* Reduced form header size */
+    }
+
+    #result h2, #result h3 {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0.8rem;  /* Adjust button size */
+    }
+}

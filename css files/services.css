@@ -1,0 +1,105 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background: #000000;
+  }
+  /* Services Section */
+  .services-section {
+    padding: 40px 20px;
+    background: #f4f4f4;
+    text-align: center;
+    margin-top: 60px; /* Account for fixed navbar */
+    background: linear-gradient(135deg, #000000 30%, #000000 70%);
+  }
+  
+  .section-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f27a11;
+  }
+  
+  .section-description {
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin: auto;
+    color: #f4f4f4;
+  }
+  
+  .services-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background: rgb(54, 54, 54);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 50px 20px;
+    flex-basis: 30%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px) rotateY(10deg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-icon img {
+    width: 80px;
+    margin-bottom: 20px;
+    transition: transform 0.6s ease;
+  }
+  
+  .service-card h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .service-card p {
+    font-size: 16px;
+    color: #e6e6e6;
+  }
+  
+  .service-counter {
+    margin-top: 20px;
+  }
+  
+  .service-counter h3 {
+    font-size: 36px;
+    color: #f27a11;
+  }
+  
+  .service-counter p {
+    font-size: 14px;
+    color: #efefef;
+  }
+  
+  /* Responsive Services Layout */
+  @media (max-width: 1024px) {
+    .service-card {
+      flex-basis: 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-card {
+      flex-basis: 100%;
+    }
+  }
+  

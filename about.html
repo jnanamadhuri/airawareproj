@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Air Quality Index</title>
+    <link rel="stylesheet" href="./css files/about.css">
+    <link rel="stylesheet" href="./css files/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+          <a href="#" class="logo">AirAware</a>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="predict.html">Predict</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <h1 class="section-title">Understanding Air Quality Index (AQI)</h1>
+            <p class="section-description">
+                The Air Quality Index (AQI) measures and communicates how polluted the air currently is or how polluted it is forecasted to become. It provides an easy-to-understand way of reporting air quality to the public.
+            </p>
+
+            <div class="content-grid">
+                <div class="content-item">
+                    <h2>Importance of AQI</h2>
+                    <p>
+                        Monitoring air quality is essential for public health and environmental protection. Poor air quality can have serious effects on human health, including respiratory problems, cardiovascular diseases, and even premature death. The AQI helps individuals make informed decisions to protect their health by indicating when the air is safe to breathe or when precautions should be taken.
+                    </p>
+                    <p>
+                        Understanding AQI values can guide people in making daily decisions, such as limiting outdoor activities on high pollution days or using air purifiers. The AQI system translates complex data into a clear, color-coded format that is easy for the general public to interpret.
+                    </p>
+                </div>
+
+                <div class="content-item">
+                    <h2>Research and Conclusions</h2>
+                    <p>
+                        Extensive research has been conducted to understand the impacts of various pollutants on health and the environment. Studies have shown that exposure to high levels of particulate matter (PM2.5 and PM10), nitrogen dioxide (NO2), sulfur dioxide (SO2), carbon monoxide (CO), and ozone (O3) can lead to significant health risks. Conclusively, reducing emissions of these pollutants and improving air quality can lead to better health outcomes and a cleaner environment.
+                    </p>
+                    <p>
+                        Research also emphasizes the importance of both local and global actions to combat air pollution. Policies targeting emission reductions, advancements in technology, and public awareness campaigns are critical for improving air quality and mitigating its adverse effects.
+                    </p>
+                </div>
+
+                <div class="content-item">
+                    <h2>Predicting Air Quality</h2>
+                    <p>
+                        Air quality prediction involves the use of advanced models and algorithms that analyze historical data, weather patterns, and pollution sources. These models use data from air quality monitoring stations, satellite observations, and meteorological data to forecast future air quality levels. Machine learning techniques and statistical methods are increasingly being utilized to enhance the accuracy of these predictions.
+                    </p>
+                    <p>
+                        Accurate air quality predictions can help in issuing timely warnings and preparing for potential health impacts. Forecasting models are continually refined with new data to improve their reliability and provide more actionable insights for both individuals and policymakers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+      
+        hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
